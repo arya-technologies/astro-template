@@ -1,0 +1,25 @@
+---
+interface Props {
+}
+
+const {  } = Astro.props;
+---
+<main class="h-full">
+  <div>
+    <h1>Astro Template</h1>
+    <div class="relative bg-gray-400">
+    <code lang="bash" id="install-code" class="">npm create astro@latest -- --template @arya-technologies/astro-template </code>
+
+<button id="copy-install" class="absolute right-0 top-0 text-green-300">Copy</button>
+    </div>
+ </div>
+</main>
+
+<script> 
+  const copyInstall = document.getElementById("copy-install")
+  const installCode = document.getElementById("install-code")
+
+  copyInstall?.addEventListener("click", () => {
+    installCode && navigator.clipboard.writeText(installCode.innerText)
+  })
+</script>
